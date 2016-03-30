@@ -5,10 +5,10 @@ return array(
     'connections' => array(
         'concrete' => array(
             'driver' => 'c5_pdo_mysql',
-            'server' => 'localhost',
-            'database' => 'viledevmain',
-            'username' => 'root',
-            'password' => 'Password!',
+            'server' => 'innovconsultationcom.domaincommysql.com',
+            'database' => 'prodmain',
+            'username' => 'vile',
+            'password' => 'Oakland510!',
             'charset' => 'utf8',
         ),
     ),
