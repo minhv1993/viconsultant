@@ -160,3 +160,184 @@
 	}
 
 }
+
+// Inno-V Theme
+.innov-image-slider-container {
+    /* background-image is moved to main.less because it needs to be in the theme root */
+    background-color: transparent;
+    background-repeat: repeat;
+    position: relative;
+    
+    .innov-image-slider-wrapper {
+        position: relative;
+    }
+    .rslides {
+        position: relative;
+
+        li {
+            background-size: cover;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            width: 100%;
+            padding: 30% 50%;
+            box-sizing: border-box;
+            position: relative;
+
+            .mega-link-overlay {
+                height: 100%;
+                width: 100%;
+                display: block;
+            }
+        }
+    }
+
+    @media (min-width: @screen-sm-min) {
+        .rslides {
+            li {
+            }
+        }
+    }
+    
+    @media (min-width: @screen-md-min) {
+        .rslides {
+            li {
+            }
+        }
+    }
+    .rslides_nav {
+        top: 0;
+        background: rgba(0,0,0,0.5);
+        bottom: 0;
+        color: white;
+        height: auto;
+        width: 5%;
+        min-width: 50px;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        opacity: 1;
+
+        &.next {
+            color: white;
+            .transition(background .35s ease-in-out);
+            right: 0;
+            &:after {
+                .transition(background .35s ease-in-out);
+                content: "\f054";
+                font-family: FontAwesome;
+                font-size: 32px;
+            }
+            &:hover {
+                text-decoration: none;
+                color: black;
+                background: rgba(255,255,255,.5);
+            }
+        }
+        &.prev {
+            color: white;
+            .transition(background .35s ease-in-out);
+            left: 0;
+            &:before {
+                .transition(background .35s ease-in-out);
+                content: "\f053";
+                font-family: FontAwesome;
+                font-size: 32px;
+            }
+            &:hover {
+                text-decoration: none;
+                color: black;
+                background: rgba(255,255,255,.5);
+            }
+        }
+    }
+    .rslides_tabs {
+        padding-left: 0px;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        li {
+            list-style-type: none;
+            display: inline-block;
+            margin-right: 5px;
+            &.rslides_here {
+                a {
+                    background: @image-slider-navigation-tab-active-color;
+                }
+            }
+            a {
+                overflow: hidden;
+                text-indent: 99px;
+                background: @image-slider-navigation-color;
+                width: 15px;
+                height: 15px;
+                display: inline-block;
+                margin-right: 10px;
+                .border-radius(30px);
+            }
+        }
+    }
+
+    .innov-image-slider-text {
+        display: flex;
+        max-width: calc(~"100% - 100px");
+        width: 100%;
+        margin: 0 auto;
+        flex-flow: column;
+        justify-content: flex-end;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        h2 {
+            color: white;
+            font-family: @image-slider-title-type-font-family;
+            background: rgba(0,0,0,0.5);
+            margin: 0;
+            padding: 3%;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        p {
+            color: white;
+            font-family: @image-slider-paragraph-type-font-family;
+            font-weight: @image-slider-paragraph-type-font-weight;
+            background: rgba(0,0,0,0.5);
+            margin: 0;
+            padding: 3%;
+            font-size: 14px;
+        }
+
+        h2 + p {
+            padding-top: 0;
+        }
+
+        @media (min-width: @screen-sm-min) {
+            h2 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: @image-slider-paragraph-type-font-size;
+            }
+        }
+
+        @media (min-width: @screen-md-min) {
+            h2 {
+                font-size: 3em;
+                font-weight: 300;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+
+    // next and previous
+    &.innov-block-image-slider-arrows {
+    }
+}
+
